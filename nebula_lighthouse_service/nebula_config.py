@@ -17,6 +17,9 @@ def create_config(ca: str, cert: str, key: str, port: int) -> str:
             punch=True,
             respond=True,
         ),
+        relay=dict(
+            am_relay=True
+        ),
         listen=dict(port=int(port)),
         pki=dict(
             ca=ca,
